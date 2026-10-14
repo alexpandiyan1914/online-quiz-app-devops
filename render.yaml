@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: quiz-backend
+    runtime: python
+    buildCommand: "pip install -r backend/requirements.txt"
+    startCommand: "cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+      - key: ENVIRONMENT
+        value: production
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: JWT_EXPIRE_MINUTES
+        value: "240"
+      - key: DATA_FILE_PATH
+        value: "data/store.json"
+      - key: CORS_ORIGINS
+        value: "*" # Update to your specific Vercel URL once frontend is deployed
