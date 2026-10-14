@@ -1,0 +1,355 @@
+{
+  "version": "1.0",
+  "initialized_at": "2026-10-14T08:47:32.510991+00:00",
+  "users": [
+    {
+      "id": "admin-user-001",
+      "email": "admin@example.com",
+      "full_name": "Demo Admin",
+      "role": "ADMIN",
+      "hashed_password": "pbkdf2_sha256$100000$29603ff43717cf56924ffaf3fd0a1f5e$742864b0740c9050c88d094261766a68b887e96dd15e5fa452bc7b38bb0c3a14",
+      "created_at": "2026-10-14T08:47:32.510991+00:00"
+    },
+    {
+      "id": "student-user-001",
+      "email": "student@example.com",
+      "full_name": "Demo Student",
+      "role": "STUDENT",
+      "hashed_password": "pbkdf2_sha256$100000$f687b4d1a96843e7e5d33710f9c0db1a$1557e3a34573b6a530bad6e024d1c72e0728e94953e4b11c7abf186319d29433",
+      "created_at": "2026-10-14T08:47:32.510991+00:00"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "quiz-devops-001",
+      "title": "DevOps & Cloud Computing Fundamentals",
+      "description": "Test your core knowledge on CI/CD pipelines, containerization, Kubernetes, and Cloud Run.",
+      "duration_minutes": 10,
+      "passing_percentage": 60,
+      "is_published": true,
+      "created_at": "2026-10-14T08:47:32.510991+00:00",
+      "updated_at": "2026-10-14T08:47:32.510991+00:00",
+      "questions": [
+        {
+          "id": "q-devops-1",
+          "text": "What does CI/CD stand for in modern software engineering?",
+          "options": [
+            "Continuous Integration and Continuous Deployment",
+            "Code Inspection and Cloud Delivery",
+            "Centralized Infrastructure and Continuous Delivery",
+            "Command Interface and Cloud Distribution"
+          ],
+          "correct_index": 0,
+          "points": 1,
+          "explanation": "CI/CD stands for Continuous Integration (automated building and testing) and Continuous Deployment/Delivery (automated releasing to production)."
+        },
+        {
+          "id": "q-devops-2",
+          "text": "Which tool provides lightweight container virtualization using images and layers?",
+          "options": [
+            "VirtualBox",
+            "Docker",
+            "Apache Tomcat",
+            "Ansible"
+          ],
+          "correct_index": 1,
+          "points": 1,
+          "explanation": "Docker packages applications and dependencies into standard container images sharing the host OS kernel."
+        },
+        {
+          "id": "q-devops-3",
+          "text": "In Kubernetes, what is the smallest deployable computing unit that encapsulates one or more containers?",
+          "options": [
+            "Node",
+            "Pod",
+            "Cluster",
+            "Namespace"
+          ],
+          "correct_index": 1,
+          "points": 1,
+          "explanation": "A Pod is the basic execution unit in Kubernetes, hosting one or more containers sharing storage and network namespaces."
+        },
+        {
+          "id": "q-devops-4",
+          "text": "What is the primary benefit of Infrastructure as Code (IaC)?",
+          "options": [
+            "Running servers without an operating system",
+            "Managing and provisioning infrastructure via declarative version-controlled files",
+            "Replacing all backend code with SQL queries",
+            "Eliminating the need for unit testing"
+          ],
+          "correct_index": 1,
+          "points": 1,
+          "explanation": "IaC allows infrastructure specifications to be documented, automated, version-controlled, and audited just like software code."
+        },
+        {
+          "id": "q-devops-5",
+          "text": "Which Google Cloud service is a fully managed serverless platform for deploying containerized apps?",
+          "options": [
+            "Google Cloud Run",
+            "Compute Engine",
+            "Google Cloud Storage",
+            "Cloud DNS"
+          ],
+          "correct_index": 0,
+          "points": 1,
+          "explanation": "Cloud Run is Google Cloud's serverless runtime that automatically scales stateless containers up or down to zero."
+        }
+      ]
+    },
+    {
+      "id": "quiz-python-002",
+      "title": "Python Programming & FastAPI Mastery",
+      "description": "Evaluate your understanding of Python syntax, async/await, Pydantic schemas, and FastAPI conventions.",
+      "duration_minutes": 8,
+      "passing_percentage": 60,
+      "is_published": true,
+      "created_at": "2026-10-14T08:47:32.510991+00:00",
+      "updated_at": "2026-10-14T08:47:32.510991+00:00",
+      "questions": [
+        {
+          "id": "q-python-1",
+          "text": "Which library does FastAPI use for high-performance data validation and typing?",
+          "options": [
+            "Marshmallow",
+            "Pydantic",
+            "SQLAlchemy",
+            "Requests"
+          ],
+          "correct_index": 1,
+          "points": 1,
+          "explanation": "FastAPI is built tightly with Pydantic for data validation, serialization, and automatic OpenAPI documentation generation."
+        },
+        {
+          "id": "q-python-2",
+          "text": "In Python, which keywords are used to define and execute asynchronous coroutines?",
+          "options": [
+            "thread and spawn",
+            "async and await",
+            "defer and yield",
+            "parallel and join"
+          ],
+          "correct_index": 1,
+          "points": 1,
+          "explanation": "'async def' declares an asynchronous function and 'await' pauses execution until the awaited awaitable completes."
+        },
+        {
+          "id": "q-python-3",
+          "text": "What does the 'pass' statement do in Python?",
+          "options": [
+            "Terminates the program immediately",
+            "Acts as a syntactical placeholder statement that does nothing",
+            "Throws an exception to pass control up the stack",
+            "Skips the rest of the loop iteration"
+          ],
+          "correct_index": 1,
+          "points": 1,
+          "explanation": "'pass' is a null operation in Python used when a statement is required syntactically but no code needs to execute."
+        },
+        {
+          "id": "q-python-4",
+          "text": "What ASGI server is standardly paired with FastAPI for production serving?",
+          "options": [
+            "WSGI",
+            "Uvicorn",
+            "Apache HTTPD",
+            "Nginx directly"
+          ],
+          "correct_index": 1,
+          "points": 1,
+          "explanation": "Uvicorn is a lightning-fast ASGI server implementation, using uvloop and httptools to run async Python applications."
+        },
+        {
+          "id": "q-python-5",
+          "text": "Which Python decorator is used in FastAPI to define a GET endpoint on a router?",
+          "options": [
+            "@router.get('/path')",
+            "@router.route('/path', method='GET')",
+            "@app.post('/path')",
+            "@api.fetch('/path')"
+          ],
+          "correct_index": 0,
+          "points": 1,
+          "explanation": "FastAPI uses HTTP-verb decorators like @router.get() or @app.get() to define path operations."
+        }
+      ]
+    },
+    {
+      "id": "quiz-web-003",
+      "title": "Web Architecture & HTTP Protocols",
+      "description": "Essential knowledge covering HTTP status codes, RESTful methods, React fundamentals, and JWT auth.",
+      "duration_minutes": 10,
+      "passing_percentage": 60,
+      "is_published": true,
+      "created_at": "2026-10-14T08:47:32.510991+00:00",
+      "updated_at": "2026-10-14T08:47:32.510991+00:00",
+      "questions": [
+        {
+          "id": "q-web-1",
+          "text": "What HTTP status code represents '401 Unauthorized'?",
+          "options": [
+            "The client is authenticated but lacks permission",
+            "Authentication credentials are required and either missing or invalid",
+            "The requested resource was permanently moved",
+            "The server encountered an unhandled internal exception"
+          ],
+          "correct_index": 1,
+          "points": 1,
+          "explanation": "HTTP 401 Unauthorized indicates that the request has not been applied because it lacks valid authentication credentials."
+        },
+        {
+          "id": "q-web-2",
+          "text": "Which HTTP method should be used when submitting answers to create a new quiz attempt?",
+          "options": [
+            "GET",
+            "POST",
+            "DELETE",
+            "HEAD"
+          ],
+          "correct_index": 1,
+          "points": 1,
+          "explanation": "POST is used to submit an entity to the specified resource, commonly causing a change in state or creating a subordinate resource."
+        },
+        {
+          "id": "q-web-3",
+          "text": "In React, which hook is used to perform side effects like fetching data or synchronizing with external APIs?",
+          "options": [
+            "useState",
+            "useEffect",
+            "useMemo",
+            "useCallback"
+          ],
+          "correct_index": 1,
+          "points": 1,
+          "explanation": "useEffect lets you perform side effects such as data fetching, timers, and manual DOM mutations after rendering."
+        },
+        {
+          "id": "q-web-4",
+          "text": "What does CORS stand for in browser web security?",
+          "options": [
+            "Cross-Origin Resource Sharing",
+            "Centralized Origin Request Security",
+            "Client Operation Restricted Scope",
+            "Continuous Online Resource System"
+          ],
+          "correct_index": 0,
+          "points": 1,
+          "explanation": "CORS (Cross-Origin Resource Sharing) is an HTTP-header based mechanism enabling a server to indicate any origins other than its own from which a browser should permit loading resources."
+        },
+        {
+          "id": "q-web-5",
+          "text": "How many parts separated by dots (.) does a standard JSON Web Token (JWT) contain?",
+          "options": [
+            "Two (Header, Body)",
+            "Three (Header, Payload, Signature)",
+            "Four (Header, Claims, Payload, Hash)",
+            "One (Single encrypted string)"
+          ],
+          "correct_index": 1,
+          "points": 1,
+          "explanation": "A JWT consists of three parts separated by dots: Header, Payload, and Signature, formatted as header.payload.signature."
+        }
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "id": "4a37af16-032c-4f09-9a3e-efe1158cb03c",
+      "quiz_id": "quiz-devops-001",
+      "quiz_title": "DevOps & Cloud Computing Fundamentals",
+      "user_id": "student-user-001",
+      "user_name": "Demo Student",
+      "score": 3,
+      "total_points": 5,
+      "percentage": 60.0,
+      "passed": true,
+      "correct_count": 3,
+      "incorrect_count": 1,
+      "unanswered_count": 1,
+      "started_at": "2026-10-14T08:48:55.244194+00:00",
+      "completed_at": "2026-10-14T08:48:55.244194+00:00",
+      "reviews": [
+        {
+          "question_id": "q-devops-1",
+          "text": "What does CI/CD stand for in modern software engineering?",
+          "options": [
+            "Continuous Integration and Continuous Deployment",
+            "Code Inspection and Cloud Delivery",
+            "Centralized Infrastructure and Continuous Delivery",
+            "Command Interface and Cloud Distribution"
+          ],
+          "selected_index": 2,
+          "correct_index": 0,
+          "is_correct": false,
+          "points_earned": 0,
+          "points_possible": 1,
+          "explanation": "CI/CD stands for Continuous Integration (automated building and testing) and Continuous Deployment/Delivery (automated releasing to production)."
+        },
+        {
+          "question_id": "q-devops-2",
+          "text": "Which tool provides lightweight container virtualization using images and layers?",
+          "options": [
+            "VirtualBox",
+            "Docker",
+            "Apache Tomcat",
+            "Ansible"
+          ],
+          "selected_index": 1,
+          "correct_index": 1,
+          "is_correct": true,
+          "points_earned": 1,
+          "points_possible": 1,
+          "explanation": "Docker packages applications and dependencies into standard container images sharing the host OS kernel."
+        },
+        {
+          "question_id": "q-devops-3",
+          "text": "In Kubernetes, what is the smallest deployable computing unit that encapsulates one or more containers?",
+          "options": [
+            "Node",
+            "Pod",
+            "Cluster",
+            "Namespace"
+          ],
+          "selected_index": 1,
+          "correct_index": 1,
+          "is_correct": true,
+          "points_earned": 1,
+          "points_possible": 1,
+          "explanation": "A Pod is the basic execution unit in Kubernetes, hosting one or more containers sharing storage and network namespaces."
+        },
+        {
+          "question_id": "q-devops-4",
+          "text": "What is the primary benefit of Infrastructure as Code (IaC)?",
+          "options": [
+            "Running servers without an operating system",
+            "Managing and provisioning infrastructure via declarative version-controlled files",
+            "Replacing all backend code with SQL queries",
+            "Eliminating the need for unit testing"
+          ],
+          "selected_index": 1,
+          "correct_index": 1,
+          "is_correct": true,
+          "points_earned": 1,
+          "points_possible": 1,
+          "explanation": "IaC allows infrastructure specifications to be documented, automated, version-controlled, and audited just like software code."
+        },
+        {
+          "question_id": "q-devops-5",
+          "text": "Which Google Cloud service is a fully managed serverless platform for deploying containerized apps?",
+          "options": [
+            "Google Cloud Run",
+            "Compute Engine",
+            "Google Cloud Storage",
+            "Cloud DNS"
+          ],
+          "selected_index": null,
+          "correct_index": 0,
+          "is_correct": false,
+          "points_earned": 0,
+          "points_possible": 1,
+          "explanation": "Cloud Run is Google Cloud's serverless runtime that automatically scales stateless containers up or down to zero."
+        }
+      ]
+    }
+  ]
+}
